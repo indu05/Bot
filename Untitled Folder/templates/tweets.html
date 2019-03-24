@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+        .container {
+            overflow-y: scroll;
+            height: 700px;
+            padding: 1rem
+        }
+</style>
+
+
+
+<div class="container">
+ 
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/home">Home</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Ask Ire</h3>
+      </div>
+    <div class="jumbotron">
+        <p class="lead"></p>
+
+        {% if tweets %}
+            {% for tweet, name, response in tweets %}
+
+                        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                  <div class="card mb-3 text-center bg-primary text-white" style="background-color:mediumseagreen !important; ">
+                  <div class="card-body">
+                    <blockquote class="card-blockquote">
+
+                     <p class="lead" align="right" > {{ tweet }} <span class="badge badge-dark">{{ name }} </span> </p>
+                    </blockquote>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                    <div class="card mb-3 text-center bg-success text-white" style="background-color:hsl(0, 0%, 50%) !important;">
+                  <div class="card-body">
+                    <blockquote class="card-blockquote">
+                        <p class="lead" align="left" > <span class="badge badge-dark">Ire</span> {{ response }} </p>
+                    </blockquote>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+
+
+                <!--<div class="card mb-3 text-center bg-success text-white col-9">-->
+                  <!--<div class="card-body">-->
+                    <!--<blockquote class="card-blockquote">-->
+                        <!--<p class="lead" align="left" > <span class="badge badge-dark">bot</span> {{ response }} </p>-->
+                    <!--</blockquote>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+              <!--<div class="card mb-3 text-center bg-primary text-white col-9 mx-auto">-->
+                  <!--<div class="card-body">-->
+                    <!--<blockquote class="card-blockquote">-->
+
+                     <!--<p class="lead" align="right" > {{ tweet }} <span class="badge badge-dark">{{ name }} </span> </p>-->
+                    <!--</blockquote>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+
+            {% endfor %}
+        {% else %}
+        <p class="lead">A chatbot has been born! Create an account and speak with it!</p>
+        {% endif %}
+
+        <form class="float-right form-signin" method="POST" action="/tweets">
+        <label for="inputName" class="sr-only ">Name</label>
+        <input type="name" name="inputName" id="inputName" class="form-control " placeholder="type your query..." required autofocus>
+        <button id="tweet" class="btn btn-lg btn-primary btn-block " type="submit">ask Ire!!</button>
+        </form>
+
+</div>
+</div>
+{% endblock %}

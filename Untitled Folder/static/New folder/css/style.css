@@ -1,0 +1,112 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+/.h-scroll {
+    height: 90vh; /* %-height of the viewport */
+    position: fixed;
+    overflow-y: scroll;
+    position: absolute;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.split {
+  height: 80%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 20%;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  top: 20%
+  width:30%
+}
+
+/*.container {
+  background: linear-gradient(
+    to right, 
+    #ff9e2c 0%, 
+    #ff9e2c 100%, 
+    #b6701e 50%, 
+    #b6701e 100%
+  );
+  height: 100%;
+  width: 30%;
+}*/
+.container {
+	  background: #466368;
+	  background: linear-gradient(to right, #f6f1d3, #648880, #293f50);
+	  border-radius: 6px;
+	  height: 120px;
+	  }
+
+.jumbotron{
+background: #cbe2c1;
+   background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+   background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+   background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+   padding: 44px 0 22px 0;
+/*background-color:none !important;*/
+}
+
+/* Control the right side */
+.right {
+  left: 30%; 
+  top: 20%
+  width: 70%;
+  
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+ 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
